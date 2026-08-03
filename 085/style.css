@@ -1,0 +1,37 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: azure;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-color: rgb(123, 169, 209);
+    padding:20px;
+    width:400px;
+    border:2px solid black; 
+}
+button{
+    margin-top:15px;
+    padding:10px 12px;
+    background-color: beige;
+    color: black;
+    border: none;
+    cursor:pointer;
+
+}
+button:hover{
+    background-color: rgb(154, 205, 250);;
+}
+.option-btn {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.option-btn.selected {
+  background-color: #007bff;
+  color: white;
+}
