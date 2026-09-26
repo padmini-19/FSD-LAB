@@ -1,0 +1,37 @@
+<h2>Job Application Form</h2>
+
+<form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+
+  <label>Name</label>
+  <input type="text" formControlName="name">
+
+  <p *ngIf="jobForm.controls.name.touched && jobForm.controls.name.hasError('required')">
+    Name is required.
+  </p>
+
+  <p *ngIf="jobForm.controls.name.touched && jobForm.controls.name.hasError('pattern')">
+    Name should contain only letters and spaces.
+  </p>
+
+
+  <label>Email</label>
+  <input type="email" formControlName="email">
+
+  <p *ngIf="jobForm.controls.email.touched && jobForm.controls.email.invalid">
+    Enter a valid email.
+  </p>
+
+
+  <label>Contact</label>
+  <input type="text" formControlName="contact">
+
+  <p *ngIf="jobForm.controls.contact.touched && jobForm.controls.contact.invalid">
+    Enter a valid 10-digit contact number.
+  </p>
+
+
+  <button type="submit" [disabled]="jobForm.invalid">
+    Apply
+  </button>
+
+</form>
